@@ -1,0 +1,7 @@
+QHR Technologies Software Development Quiz
+Digit Square Sum submission by Mark Paul
+PASSED -     questionOne:          5,751.887탎
+PASSED -     questionTwo:          6,359.445탎
+PASSED -   questionThree:      1,811,644.750탎
+     Class instantiation:            401.631탎
+PASSED -  Total run time:      1,824,157.713탎
