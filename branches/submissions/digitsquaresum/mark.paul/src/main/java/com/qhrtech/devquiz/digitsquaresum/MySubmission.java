@@ -50,14 +50,14 @@ public class MySubmission extends DigitSquareSumSubmission {
     public String questionTwo() throws Exception {
       List<String> strings = new LinkedList<>();
       for(int num = 1;num<=500;num++){
-        if(helper(num)){
+        if(lookForRepeats(num)){
            strings.add(Integer.toString(num));
         }
       }
       return String.join(",", strings);
     }
     
-    private boolean helper(int num){
+    private boolean lookForRepeats(int num){
        HashSet<Integer> set = new HashSet<Integer>();
        while(num != 1 && set.add(num)){
            num = digitSquareSum(num);
@@ -84,6 +84,27 @@ public class MySubmission extends DigitSquareSumSubmission {
         while(true){
             if (cur==89){ 
                 return counter>7;
+            }
+            else if (cur==58){    //58 37 16 4 20 42 145 are optimisations
+                return counter>6;
+            }
+            else if (cur==37){ 
+                return counter>5;
+            }
+            else if (cur==16){ 
+                return counter>4;
+            }
+            else if (cur==4){ 
+                return counter>3;
+            }
+            else if (cur==20){ 
+                return counter>2;
+            }
+            else if (cur==42){ 
+                return counter>1;
+            }
+            else if (cur==145){ 
+                return counter>0;
             }
             else if (set.contains(cur)){
                 return false;
